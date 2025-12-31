@@ -1,0 +1,33 @@
+<!doctype html>  
+<html>  
+<head>  
+<title>roblox account generator</title>  
+</head>  
+<body>
+
+<h1>roblox account generator</h1>
+
+<button onclick="generate()">generate account</button>
+
+<p id="username"></p>  
+<p id="password"></p>
+
+<script>  
+function generate() {  
+  var username = '';  
+  var password = '';  
+  var characters = 'abcdefghijklmnopqrstuvwxyz0123456789';  
+  for (var i = 0; i < 8; i++) {  
+    username += characters.charAt(Math.floor(Math.random() * characters.length));  
+  }  
+  for (var i = 0; i < 12; i++) {  
+    password += characters.charAt(Math.floor(Math.random() * characters.length));  
+  }  
+  document.getElementById('username').innerHTML = 'username: ' + username;  
+
+  document.getElementById('password').innerHTML = 'password: ' + password;  
+}  
+</script>
+
+</body>  
+</html>  
